@@ -1,0 +1,14 @@
+<p id="notice"><%= notice %></p>
+
+<p>
+  <strong>Nombre:</strong>
+  <%= @cerveza.nombre %>
+</p>
+
+<p>
+  <strong>Volumen:</strong>
+  <%= @cerveza.volumen %>
+</p>
+
+<%= link_to 'Edit', edit_cerveza_path(@cerveza) %> |
+<%= link_to 'Back', cervezas_path %>

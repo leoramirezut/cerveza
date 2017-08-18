@@ -1,0 +1,27 @@
+<%= form_with(model: cerveza, local: true) do |form| %>
+  <% if cerveza.errors.any? %>
+    <div id="error_explanation">
+      <h2><%= pluralize(cerveza.errors.count, "error") %> prohibited this cerveza from being saved:</h2>
+
+      <ul>
+      <% cerveza.errors.full_messages.each do |message| %>
+        <li><%= message %></li>
+      <% end %>
+      </ul>
+    </div>
+  <% end %>
+
+  <div class="field">
+    <%= form.label :nombre %>
+    <%= form.text_field :nombre, id: :cerveza_nombre %>
+  </div>
+
+  <div class="field">
+    <%= form.label :volumen %>
+    <%= form.text_field :volumen, id: :cerveza_volumen %>
+  </div>
+
+  <div class="actions">
+    <%= form.submit %>
+  </div>
+<% end %>
